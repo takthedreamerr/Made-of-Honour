@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Disposable Camera — Made of Honour</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Parisienne&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mediaqueries.css">
+
+</head>
+
+<body data-page="camera">
+
+  <div id="site-header"></div>
+
+  <main>
+
+    <section class="camera-page section-pad">
+
+      <div class="camera-heading reveal">
+
+        <p class="eyebrow">
+          06 · Disposable camera
+        </p>
+
+        <h1>
+          Keep the moments in between that<br>
+          <em>we probably didn't get to see.</em>
+        </h1>
+
+        <p>
+          Don't worry, there will be plenty of professional photographs you can pose for. The dispo feature is for the smaller moments in between the big ones.
+        </p>
+
+      </div>
+
+      <div class="camera-machine reveal">
+
+        <div class="camera-top">
+
+          <span class="camera-brand">
+            MADE OF HONOUR
+          </span>
+
+          <span class="film-counter">
+            <b id="frame-count">01</b>
+          </span>
+
+        </div>
+
+        <div class="viewfinder">
+
+          <video
+            id="camera-video"
+            autoplay
+            playsinline
+            muted
+          ></video>
+
+          <canvas
+            id="camera-canvas"
+            hidden
+          ></canvas>
+
+          <div
+            class="viewfinder-overlay"
+            aria-hidden="true"
+          >
+            <span></span>
+            <i></i>
+            <b></b>
+          </div>
+
+          <div
+            id="camera-message"
+            class="camera-message"
+          >
+            Camera preview will appear here.
+          </div>
+
+          <div
+            id="flash"
+            class="camera-flash"
+          ></div>
+
+        </div>
+
+        <div class="camera-controls">
+
+          <button
+            class="camera-secondary"
+            id="start-camera"
+            type="button"
+          >
+            Enable camera
+          </button>
+
+          <button
+            class="shutter"
+            id="capture-photo"
+            type="button"
+            aria-label="Take a photo"
+            disabled
+          >
+            <span></span>
+          </button>
+
+          <button
+            class="camera-secondary"
+            id="stop-camera"
+            type="button"
+          >
+            Stop
+          </button>
+
+        </div>
+
+        <div class="camera-file-fallback">
+
+          <label
+            class="camera-secondary"
+            for="camera-upload"
+          >
+            Choose a photo
+          </label>
+
+          <input
+            id="camera-upload"
+            type="file"
+            accept="image/*"
+            capture="environment"
+            hidden
+          >
+
+        </div>
+
+        <p class="camera-caption">
+          Allow camera access, frame the room, and press the shutter. Kept frames are added to the shared album.
+        </p>
+
+        <p
+          class="camera-cloud-status"
+          id="camera-cloud-status"
+          aria-live="polite"
+        ></p>
+
+      </div>
+
+      <div class="camera-keepsake reveal">
+
+        <span class="camera-keepsake-number">
+          01
+        </span>
+
+        <div>
+
+          <span class="eyebrow">
+            The good bit
+          </span>
+
+          <div class="camera-keepsake-copy">
+            A little proof you were here.
+          </div>
+
+        </div>
+
+        <span class="camera-keepsake-meta"></span>
+
+      </div>
+
+      <section
+        class="capture-result"
+        id="capture-result"
+        hidden
+      >
+
+        <div class="capture-image-wrap">
+
+          <img
+            id="captured-image"
+            alt="Your captured wedding photograph"
+          >
+
+        </div>
+
+        <div class="capture-copy">
+
+          <p class="eyebrow">
+            Frame captured
+          </p>
+
+          <h2>
+            Keep this <em>one?</em>
+          </h2>
+
+          <p>
+            Keep the frame and it goes into the shared wedding roll for the other guests to see.
+          </p>
+
+          <div class="button-row">
+
+            <button
+              class="button button-dark"
+              id="keep-photo"
+              type="button"
+            >
+              Add to album
+              <span>↗</span>
+            </button>
+
+            <button
+              class="button button-outline"
+              id="retake-photo"
+              type="button"
+            >
+              Retake
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-storage-compat.js"></script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

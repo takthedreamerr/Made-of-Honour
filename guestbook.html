@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta name="theme-color" content="#2F4156">
+
+    <title>Leave a Note — Made of Honour</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;500;600&family=Parisienne&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <audio id="siteAudio" loop preload="auto">
+        <source src="Blueberry Skies.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <header class="site-header">
+
+        <a href="index.html" class="site-name">
+            Made of Honour
+        </a>
+
+        <div class="header-right">
+
+            <button class="music-control" id="musicToggle">
+                <span class="music-indicator"></span>
+                <span id="musicText">Music</span>
+            </button>
+
+            <button class="menu-toggle" id="menuToggle">
+                Menu
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <div class="menu-panel" id="menuPanel">
+
+        <button class="menu-close" id="menuClose">
+            Close
+        </button>
+
+        <div class="menu-inner">
+
+            <p class="menu-kicker">
+                Made of Honour
+            </p>
+
+            <nav>
+
+                <a href="index.html"><span>01</span>The invitation</a>
+                <a href="day.html"><span>02</span>The day</a>
+                <a href="camera.html"><span>03</span>Your camera</a>
+                <a href="memories.html"><span>04</span>Memories</a>
+                <a href="album.html"><span>05</span>Guest album</a>
+                <a href="guestbook.html"><span>06</span>Leave a note</a>
+
+            </nav>
+
+        </div>
+
+    </div>
+
+
+    <main>
+
+        <section class="guestbook-page">
+
+            <div class="page-index">
+                06
+            </div>
+
+            <div class="guestbook-heading">
+
+                <p class="small-heading">
+                    Before you leave
+                </p>
+
+                <h1>
+                    Leave a note.
+                </h1>
+
+                <p>
+                    Something for Takudzwa & Akhona
+                    to find later.
+                </p>
+
+            </div>
+
+
+            <div class="guestbook-layout">
+
+                <form id="noteForm">
+
+                    <label for="noteName">
+                        Your name
+                    </label>
+
+                    <input
+                        id="noteName"
+                        type="text"
+                        required
+                        placeholder="Your name"
+                    >
+
+
+                    <label for="noteMessage">
+                        Your note
+                    </label>
+
+                    <textarea
+                        id="noteMessage"
+                        required
+                        maxlength="500"
+                        placeholder="Write something..."
+                    ></textarea>
+
+
+                    <button
+                        class="solid-button"
+                        type="submit"
+                    >
+                        Leave the note
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+
+                <div class="note-preview">
+
+                    <div class="paper-note">
+
+                        <p class="note-small">
+                            A little note
+                        </p>
+
+                        <p>
+                            "Somewhere between the ceremony
+                            and the last dance..."
+                        </p>
+
+                        <small>
+                            — A guest
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="saved-notes-section">
+
+            <div class="section-label dark-label">
+
+                <span>06 / 01</span>
+                <span>From the guests</span>
+
+            </div>
+
+            <div id="savedNotes" class="saved-notes"></div>
+
+        </section>
+
+
+        <footer class="footer">
+
+            <div class="footer-mark">
+                T & A
+            </div>
+
+            <div class="footer-bottom">
+
+                <span>
+                    Made of Honour
+                </span>
+
+                <a href="album.html">
+                    Guest album →
+                </a>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

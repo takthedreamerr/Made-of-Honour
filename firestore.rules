@@ -1,0 +1,50 @@
+rules_version = '2';
+
+service cloud.firestore {
+
+  match /databases/{database}/documents {
+
+    match /guestAlbum/{photoId} {
+
+      /*
+        Every authenticated guest can see
+        photographs in the shared wedding roll.
+      */
+      allow read:
+        if request.auth != null;
+
+
+      /*
+        Guests can only create a photograph
+        belonging to their own anonymous Firebase user.
+      */
+      allow create:
+        if request.auth != null
+        && request.resource.data.ownerUid == request.auth.uid
+        && request.resource.data.id == photoId
+        && request.resource.data.guest is string
+        && request.resource.data.src is string
+        && request.resource.data.storagePath is string
+        && request.resource.data.timestamp is timestamp;
+
+
+      /*
+        Photograph metadata cannot be edited.
+      */
+      allow update:
+        if false;
+
+
+      /*
+        A guest can only remove photographs
+        that they originally uploaded.
+      */
+      allow delete:
+        if request.auth != null
+        && resource.data.ownerUid == request.auth.uid;
+
+    }
+
+  }
+
+}

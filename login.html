@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="Two.png">
+  <link rel="shortcut icon" type="image/png" href="Two.png">
+  <title>Enter — Made of Honour</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body class="login-page">
+  <main class="login-layout">
+    <section class="login-art" aria-hidden="true">
+      <div class="login-polaroids">
+        <img class="login-polaroid login-polaroid-one" src="One.png" alt="" draggable="false">
+        <img class="login-polaroid login-polaroid-two" src="Two.png" alt="" draggable="false">
+        <img class="login-polaroid login-polaroid-three" src="Three.png" alt="" draggable="false">
+      </div>
+
+      <div class="login-art-inner">
+        <span class="vertical-label">MADE OF HONOUR · MADE TO HONOUR YOU</span>
+        <div>
+          <p class="eyebrow">You are invited</p>
+          <p class="script-large">to a day<br>worth keeping.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="login-panel">
+      <a class="wordmark" href="index.html">Made of Honour</a>
+
+      <div class="login-content">
+        <p class="eyebrow">Guest access</p>
+        <h1>Welcome to the<br><em>celebration.</em></h1>
+        <p class="lead">Everything you need to know about the wedding, right at your fingertips.</p>
+
+        <form id="guest-form" novalidate>
+          <label for="guest-name">Your name</label>
+          <input id="guest-name" name="guest-name" type="text" autocomplete="name" placeholder="Please enter your name" required>
+
+          <label for="access-code">Guest access code</label>
+          <input id="access-code" name="access-code" type="text" autocomplete="off" placeholder="The code on your invitation" required>
+
+          <div class="demo-code-card" aria-label="Portfolio demo access code">
+            <span class="demo-code-label">Portfolio demo access code</span>
+            <strong class="demo-code">HONOUR</strong>
+            <span class="demo-code-note">Use this code to enter my portfolio project demo.</span>
+          </div>
+
+          <p class="form-error" id="login-error" role="alert"></p>
+
+          <button class="button button-dark" type="submit">
+            Enter the wedding <span>→</span>
+          </button>
+        </form>
+
+        <p class="fine-print"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

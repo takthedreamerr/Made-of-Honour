@@ -1,0 +1,553 @@
+/* =========================================================
+   MADE OF HONOUR
+   Responsive layout
+   ========================================================= */
+
+@media (min-width:1100px){
+
+  .home-intro{
+    grid-template-columns:.4fr 1.6fr 1fr;
+  }
+
+  .experience-row{
+    grid-template-columns:2rem 1.1fr .8fr 1rem;
+  }
+
+  .cocktail-menu,
+  .programme,
+  .notes-layout{
+    gap:4rem;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width:820px){
+
+  .site-header{
+    height:4.7rem;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .site-nav{
+    position:absolute;
+    left:0;
+    right:0;
+    top:100%;
+    background:var(--white);
+    border-bottom:1px solid var(--line);
+    padding:1rem var(--pad);
+    display:grid;
+    gap:0;
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+    transition:
+      max-height .4s var(--ease),
+      opacity .25s;
+  }
+
+  .site-nav.open{
+    max-height:28rem;
+    opacity:1;
+  }
+
+  .site-nav a{
+    padding:1rem 0;
+    border-bottom:1px solid var(--line);
+  }
+
+  .home-hero{
+    min-height:calc(100svh - 4.7rem);
+  }
+
+  .hero-side-note{
+    display:none;
+  }
+
+  .home-intro,
+  .experience-grid,
+  .menu-layout,
+  .cocktail-menu,
+  .programme,
+  .notes-layout,
+  .capture-result{
+    grid-template-columns:1fr;
+  }
+
+  .home-note{
+    margin-top:1rem;
+    max-width:25rem;
+  }
+
+  .experience-grid{
+    background:none;
+  }
+
+  .experience-feature{
+    min-height:30rem;
+  }
+
+  .experience-row{
+    min-height:6.8rem;
+    padding:1rem 0;
+  }
+
+  .experience-row:hover{
+    padding-left:.5rem;
+  }
+
+  .cocktail-columns{
+    grid-template-columns:1fr;
+    gap:3rem;
+  }
+
+  .programme-heading{
+    margin-bottom:2rem;
+  }
+
+  .notes-list{
+    grid-template-columns:1fr;
+  }
+
+  .note-card:nth-child(even){
+    transform:none;
+  }
+
+  .camera-machine{
+    width:100%;
+  }
+
+  .footer-inner,
+  .footer-bottom{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .footer-links{
+    justify-content:flex-start;
+  }
+
+
+  /* -------------------------------------------------------
+     Landing polaroids — tablet
+     ------------------------------------------------------- */
+
+  .entry-polaroid{
+    width:clamp(7rem,17vw,10rem);
+  }
+
+  .entry-polaroid-left{
+    left:1.5rem;
+  }
+
+  .entry-polaroid-right{
+    right:1.5rem;
+  }
+
+
+  /* -------------------------------------------------------
+     Login polaroids — tablet
+     ------------------------------------------------------- */
+
+  .login-polaroid{
+    width:clamp(6.5rem,16vw,10rem);
+  }
+
+  .login-polaroid-one{
+    left:1.5rem;
+    top:8%;
+  }
+
+  .login-polaroid-two{
+    left:50%;
+    top:48%;
+  }
+
+  .login-polaroid-three{
+    right:.75rem;
+    bottom:.75rem;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width:620px){
+
+  body{
+    font-size:15px;
+  }
+
+  .entry-page:before{
+    inset:1rem;
+  }
+
+  .entry-shell{
+    padding:2rem 1.4rem;
+    width:100%;
+  }
+
+  .entry-shell h1{
+    font-size:clamp(4rem,19vw,6.5rem);
+  }
+
+
+  /* -------------------------------------------------------
+     Landing polaroids — mobile
+     ------------------------------------------------------- */
+
+  .entry-polaroids{
+    position:absolute;
+    inset:0;
+  }
+
+  .entry-polaroid{
+    width:clamp(5.8rem,25vw,8rem);
+  }
+
+  .entry-polaroid-left{
+    left:.65rem;
+    top:50%;
+    transform:translateY(-50%) rotate(-8deg);
+  }
+
+  .entry-polaroid-right{
+    right:.65rem;
+    top:50%;
+    transform:translateY(-50%) rotate(8deg);
+  }
+
+
+  /* -------------------------------------------------------
+     Login
+     ------------------------------------------------------- */
+
+  .login-layout{
+    display:block;
+  }
+
+  .login-art{
+    min-height:34svh;
+    height:34svh;
+  }
+
+  .login-art-inner{
+    padding:1.5rem var(--pad);
+  }
+
+  .login-art-inner .vertical-label{
+    display:none;
+  }
+
+  .script-large{
+    font-size:clamp(3.5rem,16vw,5rem);
+  }
+
+  .login-content{
+    margin:3rem 0 1rem;
+  }
+
+  .login-content h1{
+    font-size:clamp(3.3rem,15vw,5rem);
+  }
+
+
+  /* -------------------------------------------------------
+     Login polaroids — mobile
+     ------------------------------------------------------- */
+
+  .login-polaroids{
+    position:absolute;
+    inset:0;
+  }
+
+  .login-polaroid{
+    width:clamp(5.2rem,22vw,7rem);
+  }
+
+  .login-polaroid-one{
+    left:.65rem;
+    top:8%;
+    transform:rotate(-8deg);
+  }
+
+  .login-polaroid-two{
+    left:50%;
+    top:47%;
+    transform:translate(-50%,-50%) rotate(3deg);
+  }
+
+  .login-polaroid-three{
+    right:.35rem;
+    bottom:.35rem;
+    transform:rotate(8deg);
+  }
+
+
+  /* -------------------------------------------------------
+     General mobile
+     ------------------------------------------------------- */
+
+  .page-hero,
+  .page-hero.compact{
+    min-height:55svh;
+    padding-top:5rem;
+    padding-bottom:4rem;
+  }
+
+  .page-hero h1{
+    font-size:clamp(4rem,18vw,6rem);
+  }
+
+  .section-pad{
+    padding-top:4.5rem;
+    padding-bottom:4.5rem;
+  }
+
+  .experience-feature{
+    min-height:26rem;
+    padding:2rem;
+  }
+
+  .experience-row{
+    grid-template-columns:2rem 1fr 1.2rem;
+    gap:.7rem;
+  }
+
+  .experience-row small{
+    display:none;
+  }
+
+  .experience-row strong{
+    font-size:1.55rem;
+  }
+
+  .timeline-item{
+    grid-template-columns:4.5rem 1fr;
+    gap:1rem;
+  }
+
+  .timeline-item time{
+    font-size:1.6rem;
+  }
+
+  .timeline-item h3{
+    font-size:1.9rem;
+  }
+
+  .album-toolbar{
+    align-items:start;
+    gap:1rem;
+    flex-direction:column;
+  }
+
+  .album-toolbar h2{
+    font-size:2.7rem;
+  }
+
+  .camera-controls{
+    gap:.5rem;
+  }
+
+  .camera-secondary{
+    font-size:.58rem;
+  }
+
+  .shutter{
+    width:4.3rem;
+    height:4.3rem;
+  }
+
+  .shutter span{
+    width:3rem;
+    height:3rem;
+  }
+
+  .modal-backdrop{
+    padding:.7rem;
+  }
+
+  .modal-panel{
+    padding:.55rem;
+  }
+
+  .modal-panel img{
+    max-height:82vh;
+  }
+
+  .footer-wordmark{
+    font-size:2.2rem;
+  }
+
+
+  /* -------------------------------------------------------
+     Music
+     ------------------------------------------------------- */
+
+  .wedding-music{
+    top:.7rem;
+    right:.7rem;
+    padding:.42rem .55rem .42rem .65rem;
+  }
+
+  .wedding-music .music-state{
+    min-width:2.4rem;
+  }
+
+
+  /* -------------------------------------------------------
+     Camera keepsake
+     ------------------------------------------------------- */
+
+  .camera-keepsake{
+    grid-template-columns:auto 1fr;
+    gap:.7rem;
+  }
+
+  .camera-keepsake-meta{
+    grid-column:2;
+    text-align:left;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width:380px){
+
+  .site-wordmark{
+    font-size:1.25rem;
+  }
+
+  .hero-content h1{
+    font-size:3.7rem;
+  }
+
+  .button{
+    width:100%;
+    gap:1rem;
+  }
+
+  .experience-row{
+    min-height:6rem;
+  }
+
+  .experience-row strong{
+    font-size:1.35rem;
+  }
+
+  .timeline-item{
+    grid-template-columns:3.8rem 1fr;
+  }
+
+  .timeline-item time{
+    font-size:1.4rem;
+  }
+
+  .cookie-banner{
+    left:.7rem;
+    bottom:.7rem;
+    width:calc(100% - 1.4rem);
+  }
+
+
+  /* Keep the two landing photographs separated */
+  .entry-polaroid{
+    width:5.5rem;
+  }
+
+  .entry-polaroid-left{
+    left:.35rem;
+  }
+
+  .entry-polaroid-right{
+    right:.35rem;
+  }
+
+
+  /* Keep login photographs separated */
+  .login-polaroid{
+    width:4.9rem;
+  }
+
+  .login-polaroid-one{
+    left:.3rem;
+  }
+
+  .login-polaroid-two{
+    left:50%;
+  }
+
+  .login-polaroid-three{
+    right:.15rem;
+    bottom:.15rem;
+  }
+
+}
+
+
+/* =========================================================
+   LANDSCAPE PHONES
+   ========================================================= */
+
+@media (orientation:landscape) and (max-height:600px){
+
+  .home-hero{
+    min-height:650px;
+  }
+
+  .login-art{
+    min-height:650px;
+  }
+
+  .page-hero,
+  .page-hero.compact{
+    min-height:520px;
+  }
+
+}
+
+
+/* =========================================================
+   EXTRA-SHORT MOBILE LOGIN
+   Prevent the three photographs from colliding
+   ========================================================= */
+
+@media (max-width:620px) and (max-height:700px){
+
+  .login-art{
+    min-height:300px;
+    height:300px;
+  }
+
+  .login-polaroid{
+    width:5rem;
+  }
+
+  .login-polaroid-one{
+    top:7%;
+  }
+
+  .login-polaroid-two{
+    top:48%;
+  }
+
+  .login-polaroid-three{
+    bottom:.25rem;
+  }
+
+}

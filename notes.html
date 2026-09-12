@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Notes — Made of Honour</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Parisienne&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mediaqueries.css">
+
+</head>
+
+<body data-page="notes">
+
+  <div id="site-header"></div>
+
+  <main>
+
+    <section class="page-hero compact">
+
+      <p class="eyebrow">
+        05 · Guestbook
+      </p>
+
+      <h1>
+        A few <em>words.</em>
+      </h1>
+
+      <p>
+        Maybe a prayer, a funny story, your blessing, an inside joke? Here is where you get to say whatever you feel belongs with the beautiful bride and groom, Akhona and Takudzwa.
+      </p>
+
+    </section>
+
+    <section class="notes-layout section-pad">
+
+      <div class="note-form-wrap reveal">
+
+        <p class="eyebrow">
+          For the couple
+        </p>
+
+        <h2>
+          Write something<br>
+          <em>they can keep.</em>
+        </h2>
+
+        <form
+          id="note-form"
+          novalidate
+        >
+
+          <label for="note-name">
+            From
+          </label>
+
+          <input
+            id="note-name"
+            type="text"
+            readonly
+          >
+
+          <label for="note-message">
+            Your note
+          </label>
+
+          <textarea
+            id="note-message"
+            maxlength="500"
+            placeholder="Write something for the couple…"
+            required
+          ></textarea>
+
+          <div class="character-row">
+
+            <span>
+              
+            </span>
+
+            <span id="char-count">
+              0 / 500
+            </span>
+
+          </div>
+
+          <p
+            class="form-error"
+            id="note-error"
+            role="alert"
+          ></p>
+
+          <button
+            class="button button-dark"
+            type="submit"
+          >
+            Send it to them
+            <span>↗</span>
+          </button>
+
+        </form>
+
+      </div>
+
+      <div class="guestbook reveal">
+
+        <div class="guestbook-head">
+
+          <span>
+            THE GUESTBOOK
+          </span>
+
+          <span id="note-count">
+            0 notes
+          </span>
+
+        </div>
+
+        <div
+          id="notes-list"
+          class="notes-list"
+        ></div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

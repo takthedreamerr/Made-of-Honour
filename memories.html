@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta name="theme-color" content="#2F4156">
+
+    <title>Memories — Made of Honour</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;500;600&family=Parisienne&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <audio id="siteAudio" loop preload="auto">
+        <source src="Blueberry Skies.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <header class="site-header">
+
+        <a href="index.html" class="site-name">
+            Made of Honour
+        </a>
+
+        <div class="header-right">
+
+            <button class="music-control" id="musicToggle">
+                <span class="music-indicator"></span>
+                <span id="musicText">Music</span>
+            </button>
+
+            <button class="menu-toggle" id="menuToggle">
+                Menu
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <div class="menu-panel" id="menuPanel">
+
+        <button class="menu-close" id="menuClose">
+            Close
+        </button>
+
+        <div class="menu-inner">
+
+            <p class="menu-kicker">
+                Made of Honour
+            </p>
+
+            <nav>
+
+                <a href="index.html"><span>01</span>The invitation</a>
+                <a href="day.html"><span>02</span>The day</a>
+                <a href="camera.html"><span>03</span>Your camera</a>
+                <a href="memories.html"><span>04</span>Memories</a>
+                <a href="album.html"><span>05</span>Guest album</a>
+                <a href="guestbook.html"><span>06</span>Leave a note</a>
+
+            </nav>
+
+        </div>
+
+    </div>
+
+
+    <main>
+
+        <section class="memories-page">
+
+            <div class="page-index">
+                04
+            </div>
+
+            <div class="memories-heading">
+
+                <p class="small-heading">
+                    The photographs are still
+                </p>
+
+                <h1>
+                    Developing.
+                </h1>
+
+                <p>
+                    Every guest sees the day differently.
+                </p>
+
+            </div>
+
+
+            <div class="film-prints">
+
+                <figure class="polaroid">
+                    <img src="portrait-01.jpg" alt="">
+                    <figcaption>
+                        Somewhere in the afternoon
+                    </figcaption>
+                </figure>
+
+                <figure class="polaroid">
+                    <img src="flowers.jpg" alt="">
+                    <figcaption>
+                        A little detail
+                    </figcaption>
+                </figure>
+
+                <figure class="polaroid">
+                    <img src="reception.jpg" alt="">
+                    <figcaption>
+                        Later that evening
+                    </figcaption>
+                </figure>
+
+            </div>
+
+
+            <button
+                class="simple-button"
+                id="developButton"
+            >
+                Develop photographs
+                <span>→</span>
+            </button>
+
+        </section>
+
+
+        <section class="memory-message">
+
+            <div class="section-label dark-label">
+                <span>04 / 01</span>
+                <span>The reveal</span>
+            </div>
+
+            <div>
+
+                <p class="small-heading">
+                    A little patience
+                </p>
+
+                <h2>
+                    The day looked
+                    different to everyone.
+                </h2>
+
+                <p>
+                    The photographs slowly become a record
+                    of all the little moments you may never
+                    have seen yourself.
+                </p>
+
+                <a href="album.html">
+                    Enter the guest album →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <footer class="footer">
+
+            <div class="footer-mark">
+                T & A
+            </div>
+
+            <div class="footer-bottom">
+
+                <span>Made of Honour</span>
+
+                <a href="album.html">
+                    Guest album →
+                </a>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
